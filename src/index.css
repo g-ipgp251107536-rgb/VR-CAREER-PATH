@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --neo-cyan: #00E5FF;
+    --neo-yellow: #FFE600;
+    --neo-bg-light: #FFFDF7;
+    --neo-bg-dark: #121316;
+    --neo-card-dark: #1E2026;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-left: 2px solid #000;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1e2026;
+  border-left: 2px solid #3f3f46;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFE600;
+  border: 2px solid #000;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #00E5FF;
+  border: 2px solid #000;
+}
+
+/* 3D Brutalism Base Classes */
+.neo-border {
+  border: 3px solid #000000;
+}
+
+.neo-border-thick {
+  border: 4px solid #000000;
+}
+
+.neo-shadow-sm {
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.neo-shadow {
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.neo-shadow-xl {
+  box-shadow: 12px 12px 0px #000000;
+}
+
+/* 3D Brutalism Buttons - Tactile, Physical, Elevated */
+.neo-btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.neo-btn-3d:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.neo-btn-3d:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.neo-btn-3d-lg {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 4px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.neo-btn-3d-lg:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #000000;
+}
+
+.neo-btn-3d-lg:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* Primary Color Modifiers */
+.neo-btn-yellow {
+  background-color: #FFE600;
+  color: #000000;
+}
+.neo-btn-yellow:hover {
+  background-color: #f7de00;
+}
+
+.neo-btn-cyan {
+  background-color: #00E5FF;
+  color: #000000;
+}
+.neo-btn-cyan:hover {
+  background-color: #00cdef;
+}
+
+.neo-card {
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+/* DARK MODE OVERRIDES (Modern Neobrutalism Dark Theme - High Contrast) */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #121316;
+  color: #F4F4F5;
+}
+
+.dark .neo-border {
+  border-color: #F4F4F5;
+}
+
+.dark .neo-border-thick {
+  border-color: #F4F4F5;
+}
+
+.dark .neo-shadow {
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.dark .neo-shadow-lg {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.dark .neo-shadow-xl {
+  box-shadow: 12px 12px 0px #000000;
+}
+
+.dark .neo-shadow-sm {
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.dark .neo-btn-3d {
+  border-color: #ffffff;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.dark .neo-btn-3d:hover {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.dark .neo-btn-3d:active {
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.dark .neo-btn-3d-lg {
+  border-color: #ffffff;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.dark .neo-btn-3d-lg:hover {
+  box-shadow: 9px 9px 0px #000000;
+}
+
+.dark .neo-btn-3d-lg:active {
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* Print optimizations for School Counselor report & student slip */
+@media print {
+  nav, footer, button, #btn-print-slip, #btn-retake-test, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .neo-shadow, .neo-shadow-lg, .neo-shadow-xl, .neo-btn-3d, .neo-btn-3d-lg {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .neo-border, .neo-border-thick {
+    border: 1.5px solid #000000 !important;
+  }
+}
